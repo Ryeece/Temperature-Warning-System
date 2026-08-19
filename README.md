@@ -33,6 +33,8 @@ First the DHT11 takes the temperature reading, then it sends the data to the Meg
 
 To test the `isnan()` fault handling, I deliberately disconnected the DHT11 signal.
 ## PCB Design
+<img width="995" height="630" alt="image" src="https://github.com/user-attachments/assets/e7f6db50-3395-4979-85ab-742f3f90b226" />
+
 ## Problems Encountered and Fixes
 ## Final Result
 ## Future Improvements
