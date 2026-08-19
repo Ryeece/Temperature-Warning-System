@@ -10,6 +10,16 @@ Using the Arduino Mega I measured the temperature with a DHT11 sensor and had th
 - Standalone battery operation
 - Custom PCB shield
 ## Hardware Used
+- ELEGOO Arduino Mega 2560
+- DHT11 temperature and humidity module
+- 1602A V2.0 16×2 LCD
+- 10 kΩ potentiometer
+- LED
+- 220 Ω resistor
+- Breadboard
+- Jumper wires
+- Battery power supply
+- Custom Arduino Mega shield PCB designed in KiCad to replace the breadboard and jumper wires
 ## System Operation
 ## Testing and Fault Handling
 ## PCB Design
