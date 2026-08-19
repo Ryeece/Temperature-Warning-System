@@ -34,7 +34,9 @@ First the DHT11 takes the temperature reading, then it sends the data to the Meg
 To test the `isnan()` fault handling, I deliberately disconnected the DHT11 signal.
 ## PCB Design
 The PCB was designed as an Arduino Mega shield so it could plug directly into the Mega.
+
 A 16 pin header was added for the 16×2 LCD and a 3 pin header for the DHT11
+
 KiCad schematic:
 <img width="995" height="630" alt="image" src="https://github.com/user-attachments/assets/e7f6db50-3395-4979-85ab-742f3f90b226" />
 KiCad PCB layout:
