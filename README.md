@@ -24,13 +24,12 @@ Using the Arduino Mega I measured the temperature with a DHT11 sensor and had th
 First the DHT11 takes the temperature reading, then it sends the data to the Mega and using the code uploaded on the Mega it displays the temperature on the LCD. If the temperature threshold is exceeded the warning LED turns on and a warning message is displayed on the LCD. And finally the function `isnan()` is used to detect an invalid sensor reading which activates the warning LED and error message on the LCD.
 ## Testing and Fault Handling
 ## Testing and Fault Handling
-
 | Test | Expected Result | Result |
-|---|---|---|
-| Temperature below threshold | LED off and normal message displayed | Pass |
-| Temperature above threshold | LED on and warning message displayed | Pass |
-| DHT11 signal disconnected | Warning LED on and sensor error message displayed | Pass |
-| Battery powered operation | System operates without laptop connection | Pass |
+| Temperature below threshold | LED off and normal temp message displayed on the LCD | Pass |
+| Temperature above threshold | LED on and warning high temp message displayed on the LCD | Pass |
+| DHT11 signal disconnected | Warning LED on and sensor error message displayed on the LCD | Pass |
+| Battery powered connection | System operates without the laptop connection | Pass |
+
 ## PCB Design
 ## Problems Encountered and Fixes
 ## Final Result
