@@ -30,6 +30,7 @@ First the DHT11 takes the temperature reading, then it sends the data to the Meg
 | Temperature above threshold | LED on and high-temperature warning message displayed on the LCD | Pass |
 | DHT11 signal disconnected | Warning LED on and sensor error message displayed on the LCD | Pass |
 | Battery-powered operation | System operates without the laptop connection | Pass |
+
 To test the `isnan()` fault handling, I deliberately disconnected the DHT11 signal.
 ## PCB Design
 ## Problems Encountered and Fixes
