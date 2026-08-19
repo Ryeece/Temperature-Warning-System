@@ -35,7 +35,8 @@ To test the `isnan()` fault handling, I deliberately disconnected the DHT11 sign
 ## PCB Design
 The PCB was designed as an Arduino Mega shield so it could plug directly into the Mega.
 
-A 16 pin header was added for the 16×2 LCD and a 3 pin header for the DHT11
+- A 16 pin header was added for the 16×2 LCD and a 3 pin header for the DHT11
+- the LED, 220 Ω resistor and 10 kΩ potentiometer were placed on the shield
 
 KiCad schematic:
 <img width="995" height="630" alt="image" src="https://github.com/user-attachments/assets/e7f6db50-3395-4979-85ab-742f3f90b226" />
