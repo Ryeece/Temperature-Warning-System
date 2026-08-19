@@ -39,7 +39,7 @@ The PCB was designed as an Arduino Mega shield so it could plug directly into th
 - The LED, 220 Ω resistor and 10 kΩ potentiometer were placed on the shield
 - The breadboard prototype was used to help plan the PCB layout
 - ERC and DRC were used to check the design
-- The final layout was checked in KiCad's 3D viewer
+- The final layout was checked in KiCad's 3D Viewer
 
 KiCad schematic:
 
