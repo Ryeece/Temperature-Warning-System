@@ -44,9 +44,11 @@ The PCB was designed as an Arduino Mega shield so it could plug directly into th
 KiCad schematic:
 
 <img width="995" height="630" alt="image" src="https://github.com/user-attachments/assets/e7f6db50-3395-4979-85ab-742f3f90b226" />
+
 KiCad PCB layout:
 
 <img width="1014" height="542" alt="image" src="https://github.com/user-attachments/assets/fc13e170-69f7-49f1-b91a-5bb3717faa6d" />
+
 3D view of the PCB Mega shield:
 
 <img width="627" height="556" alt="image" src="https://github.com/user-attachments/assets/edd0cc0d-a606-4631-9a60-22abe778bf9d" />
