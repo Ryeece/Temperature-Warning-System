@@ -52,6 +52,7 @@ KiCad PCB layout:
 3D view of the PCB Mega shield:
 
 <img width="627" height="556" alt="image" src="https://github.com/user-attachments/assets/edd0cc0d-a606-4631-9a60-22abe778bf9d" />
+
 The pin headers footprints do not matter as they are just for the correct position. The female headers will be replaced with male headers underneath when welding the physical PCB, and the male headers will be replaced with female headers so the components can connect and disconnect easily.
 ## Problems Encountered and Fixes
 ## Final Result
