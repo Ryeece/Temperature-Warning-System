@@ -14,7 +14,7 @@ Using the Arduino Mega I measured the temperature with a DHT11 sensor and had th
 - LCD status messages
 - Standalone battery operation
 - Custom PCB shield
-- 
+
 ## Hardware Used
 
 - ELEGOO Arduino Mega 2560
@@ -27,7 +27,7 @@ Using the Arduino Mega I measured the temperature with a DHT11 sensor and had th
 - Jumper wires
 - Battery power supply
 - Custom Arduino Mega shield PCB designed in KiCad to replace the breadboard and jumper wires
-- 
+
 ## System Operation
 
 First the DHT11 takes the temperature reading, then it sends the data to the Mega and the Mega processes the reading using the uploaded code and displays the temperature on the LCD. If the temperature threshold is exceeded the warning LED turns on and a warning message is displayed on the LCD. Finally the function `isnan()` is used to detect an invalid sensor reading which activates the warning LED and error message on the LCD.
