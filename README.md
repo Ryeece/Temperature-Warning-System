@@ -80,6 +80,10 @@ The Mega-template header footprints mainly establish the correct physical positi
 | KiCad ERC/DRC warnings | Unused and duplicated connections in the Arduino Mega template | Used No Connect flags, `PWR_FLAG`s and intentional exclusions where appropriate |
 ## Final Result
 The DHT11 live temperature measurement was displayed on the LCD with a warning LED and high-temperature message when the temperature threshold was exceeded. The sensor fault detection worked by activating the warning LED and displaying an error message on the LCD. The system operated independently using battery power. The custom Mega shield PCB design was completed and checked with ERC and DRC, but the physical PCB manufacturing/soldering is still pending.
+
+## Project Files
+
+
 ## Future Improvements
 A temperature-controlled fan could be added that uses PWM (Pulse Width Modulation) based on the temperature, allowing the cooling rate to increase or decrease when needed.
 
