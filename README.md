@@ -22,7 +22,15 @@ Using the Arduino Mega I measured the temperature with a DHT11 sensor and had th
 - Custom Arduino Mega shield PCB designed in KiCad to replace the breadboard and jumper wires
 ## System Operation
 First the DHT11 takes the temperature reading, then it sends the data to the Mega and using the code uploaded on the Mega it displays the temperature on the LCD. If the temperature threshold is exceeded the warning LED turns on and a warning message is displayed on the LCD. And finally the function `isnan()` is used to detect an invalid sensor reading which activates the warning LED and error message on the LCD.
-## Testing and Fault Handling
+## Breadboard Prototype
+The system was first built and tested on a breadboard before being transferred into the custom Arduino Mega shield PCB design.
+
+Normal operation — LCD shows live temperature and Normal temp, LED off.
+
+<img width="1920" height="3413" alt="image" src="https://github.com/user-attachments/assets/bbfece45-785f-4d3e-9b1b-e3c11eda73a9" />
+
+
+
 ## Testing and Fault Handling
 | Test | Expected Result | Result |
 |---|---|---|
