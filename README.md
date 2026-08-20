@@ -27,7 +27,7 @@ The system was first built and tested on a breadboard before being transferred i
 
 Normal operation — LCD shows live temperature and Normal temp, LED off.
 
-<img width="1920" height="3413" alt="image" src="https://github.com/user-attachments/assets/bbfece45-785f-4d3e-9b1b-e3c11eda73a9" />
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/bbfece45-785f-4d3e-9b1b-e3c11eda73a9" />
 
 
 
