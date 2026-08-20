@@ -1,15 +1,22 @@
 # Temperature-Warning-System
+
 Embedded temperature monitoring and warning system using an Arduino Mega 2560, DHT11, 16×2 LCD, and custom KiCad shield PCB
+
 ## Overview
+
 Using the Arduino Mega I measured the temperature with a DHT11 sensor and had the live temperature reading displayed on the 16×2 LCD. When the set temperature threshold was exceeded a warning LED turns on with a warning message on the 16×2 LCD. For sensor faults the warning LED turns on with a check sensor message on the 16×2 LCD. Finally a custom Mega shield PCB was designed in KiCad.
+
 ## Features
+
 - Live temperature measurement
 - Temperature threshold warning
 - Sensor fault detection
 - LCD status messages
 - Standalone battery operation
 - Custom PCB shield
+- 
 ## Hardware Used
+
 - ELEGOO Arduino Mega 2560
 - DHT11 temperature and humidity module
 - 1602A V2.0 16×2 LCD
@@ -20,8 +27,11 @@ Using the Arduino Mega I measured the temperature with a DHT11 sensor and had th
 - Jumper wires
 - Battery power supply
 - Custom Arduino Mega shield PCB designed in KiCad to replace the breadboard and jumper wires
+- 
 ## System Operation
+
 First the DHT11 takes the temperature reading, then it sends the data to the Mega and the Mega processes the reading using the uploaded code and displays the temperature on the LCD. If the temperature threshold is exceeded the warning LED turns on and a warning message is displayed on the LCD. Finally the function `isnan()` is used to detect an invalid sensor reading which activates the warning LED and error message on the LCD.
+
 ## Breadboard Prototype
 The system was first built and tested on a breadboard before being transferred into the custom Arduino Mega shield PCB design.
 
@@ -40,6 +50,7 @@ The temperature threshold was temporarily set to 29.8°C so the high-temperature
 <img width="485" height="426" alt="Sensor fault" src="https://github.com/user-attachments/assets/3776b65e-7e59-48ca-ad5a-70ac5dcb2880" />
 
 ## Testing and Fault Handling
+
 | Test | Expected Result | Result |
 |---|---|---|
 | Temperature below threshold | LED off and normal-temperature message displayed on the LCD | Pass |
@@ -48,7 +59,9 @@ The temperature threshold was temporarily set to 29.8°C so the high-temperature
 | Battery-powered operation | System operates without the laptop connection | Pass |
 
 To test the `isnan()` fault handling, I deliberately disconnected the DHT11 signal.
+
 ## PCB Design
+
 The PCB was designed as an Arduino Mega shield so it could plug directly into the Mega.
 
 - A 16-pin header was added for the 16×2 LCD and a 3-pin header for the DHT11
@@ -70,6 +83,7 @@ KiCad PCB layout:
 <img width="627" height="556" alt="3D view of the PCB Mega shield" src="https://github.com/user-attachments/assets/edd0cc0d-a606-4631-9a60-22abe778bf9d" />
 
 The Mega-template header footprints mainly establish the correct physical positions. In place of the female headers, male headers will be soldered underneath the physical PCB to allow connection to the Mega 2560, and female headers will be soldered on top for removable connections for the DHT11 and LCD.
+
 ## Problems Encountered and Fixes
 
 | Problem | Cause | Fix |
@@ -78,13 +92,16 @@ The Mega-template header footprints mainly establish the correct physical positi
 | LCD displayed dark blocks instead of text | D7 was connected incorrectly | Corrected the LCD wiring so D7 connected to the correct LCD pin |
 | Invalid DHT11 reading | Sensor communication failed when the signal was disconnected | Added `isnan()` fault detection, an LCD error message and warning LED activation |
 | KiCad ERC/DRC warnings | Unused and duplicated connections in the Arduino Mega template | Used No Connect flags, `PWR_FLAG`s and intentional exclusions where appropriate |
+
 ## Final Result
+
 The DHT11 live temperature measurement was displayed on the LCD with a warning LED and high-temperature message when the temperature threshold was exceeded. The sensor fault detection worked by activating the warning LED and displaying an error message on the LCD. The system operated independently using battery power. The custom Mega shield PCB design was completed and checked with ERC and DRC, but the physical PCB manufacturing/soldering is still pending.
 
 ## Project Files
 
 
 ## Future Improvements
+
 A temperature-controlled fan could be added that uses PWM (Pulse Width Modulation) based on the temperature, allowing the cooling rate to increase or decrease when needed.
 
 To ensure the system never needs a temperature threshold code change again, some user-adjustable buttons to alter the threshold could be added.
