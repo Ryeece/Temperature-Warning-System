@@ -53,7 +53,7 @@ KiCad PCB layout:
 
 <img width="627" height="556" alt="image" src="https://github.com/user-attachments/assets/edd0cc0d-a606-4631-9a60-22abe778bf9d" />
 
-The pin headers footprints do not matter as they are just for the correct position. The female headers will be replaced with male headers underneath when welding the physical PCB to allow the connection to the Mega 2560, and the male headers will be replaced with female headers so the components can connect and disconnect easily.
+The Mega-template header footprints mainly establish the correct physical positions. In place of the female headers, male headers will be soldered underneath the physical PCB to allow the connection to the Mega 2560, and female headers will be soldered on top for removable connections for the DHT11/LCD.
 ## Problems Encountered and Fixes
 ## Final Result
 ## Future Improvements
