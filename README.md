@@ -21,23 +21,23 @@ Using the Arduino Mega I measured the temperature with a DHT11 sensor and had th
 - Battery power supply
 - Custom Arduino Mega shield PCB designed in KiCad to replace the breadboard and jumper wires
 ## System Operation
-First the DHT11 takes the temperature reading, then it sends the data to the Mega and using the code uploaded on the Mega it displays the temperature on the LCD. If the temperature threshold is exceeded the warning LED turns on and a warning message is displayed on the LCD. And finally the function `isnan()` is used to detect an invalid sensor reading which activates the warning LED and error message on the LCD.
+First the DHT11 takes the temperature reading, then it sends the data to the Mega and using the code uploaded on the Mega it displays the temperature on the LCD. If the temperature threshold is exceeded the warning LED turns on and a warning message is displayed on the LCD. Finally the function `isnan()` is used to detect an invalid sensor reading which activates the warning LED and error message on the LCD.
 ## Breadboard Prototype
 The system was first built and tested on a breadboard before being transferred into the custom Arduino Mega shield PCB design.
 
-The temperature threshold was set to 29.8°C to trigger the temperature warning, as the DHT11 was reading the room temperature.
+The temperature threshold was temporarily set to 29.8°C so the high-temperature warning could be tested at room temperature.
 
 - Normal operation — LCD shows live temperature and Normal temp, LED off:
 
-<img width="485" height="418" alt="image" src="https://github.com/user-attachments/assets/fe96e190-a4d9-4b99-ac2d-5ec7e6bef2c7" />
+<img width="485" height="418" alt="Normal operation" src="https://github.com/user-attachments/assets/fe96e190-a4d9-4b99-ac2d-5ec7e6bef2c7" />
 
 - High-temperature warning — LCD shows TEMP TOO HIGH, warning LED on:
 
-<img width="519" height="418" alt="image" src="https://github.com/user-attachments/assets/78f6b438-1282-4f8d-8de5-5e1e760caea6" />
+<img width="519" height="418" alt="High-temperature warning" src="https://github.com/user-attachments/assets/78f6b438-1282-4f8d-8de5-5e1e760caea6" />
 
 - Sensor fault — LCD shows the sensor error message, warning LED on:
 
-<img width="485" height="426" alt="image" src="https://github.com/user-attachments/assets/3776b65e-7e59-48ca-ad5a-70ac5dcb2880" />
+<img width="485" height="426" alt="Sensor fault" src="https://github.com/user-attachments/assets/3776b65e-7e59-48ca-ad5a-70ac5dcb2880" />
 
 ## Testing and Fault Handling
 | Test | Expected Result | Result |
@@ -59,17 +59,17 @@ The PCB was designed as an Arduino Mega shield so it could plug directly into th
 
 KiCad schematic:
 
-<img width="995" height="630" alt="image" src="https://github.com/user-attachments/assets/e7f6db50-3395-4979-85ab-742f3f90b226" />
+<img width="995" height="630" alt="KiCad schematic" src="https://github.com/user-attachments/assets/e7f6db50-3395-4979-85ab-742f3f90b226" />
 
 KiCad PCB layout:
 
-<img width="1014" height="542" alt="image" src="https://github.com/user-attachments/assets/fc13e170-69f7-49f1-b91a-5bb3717faa6d" />
+<img width="1014" height="542" alt="KiCad PCB layout" src="https://github.com/user-attachments/assets/fc13e170-69f7-49f1-b91a-5bb3717faa6d" />
 
 3D view of the PCB Mega shield:
 
-<img width="627" height="556" alt="image" src="https://github.com/user-attachments/assets/edd0cc0d-a606-4631-9a60-22abe778bf9d" />
+<img width="627" height="556" alt="3D view of the PCB Mega shield" src="https://github.com/user-attachments/assets/edd0cc0d-a606-4631-9a60-22abe778bf9d" />
 
-The Mega-template header footprints mainly establish the correct physical positions. In place of the female headers, male headers will be soldered underneath the physical PCB to allow the connection to the Mega 2560, and female headers will be soldered on top for removable connections for the DHT11/LCD.
+The Mega-template header footprints mainly establish the correct physical positions. In place of the female headers, male headers will be soldered underneath the physical PCB to allow connection to the Mega 2560, and female headers will be soldered on top for removable connections for the DHT11/LCD.
 ## Problems Encountered and Fixes
 
 | Problem | Cause | Fix |
@@ -79,7 +79,7 @@ The Mega-template header footprints mainly establish the correct physical positi
 | Invalid DHT11 reading | Sensor communication failed when the signal was disconnected | Added `isnan()` fault detection, an LCD error message and warning LED activation |
 | KiCad ERC/DRC warnings | Unused and duplicated connections in the Arduino Mega template | Used No Connect flags, `PWR_FLAG`s and intentional exclusions where appropriate |
 ## Final Result
-The DHT11 live temperature measurement was displayed on the LCD with a warning LED and high temperature message when the temperature threshold was exceeded. The sensor fault detection worked by activating the warning LED and displaying an error message on the LCD. The system operated independently using battery power. The custom Mega shield PCB design was completed and checked with ERC and DRC, but the physical PCB manufacturing/soldering is still pending.
+The DHT11 live temperature measurement was displayed on the LCD with a warning LED and high-temperature message when the temperature threshold was exceeded. The sensor fault detection worked by activating the warning LED and displaying an error message on the LCD. The system operated independently using battery power. The custom Mega shield PCB design was completed and checked with ERC and DRC, but the physical PCB manufacturing/soldering is still pending.
 ## Future Improvements
 A temperature-controlled fan could be added that uses PWM (Pulse Width Modulation) based on the temperature, allowing the cooling rate to increase or decrease when needed.
 
