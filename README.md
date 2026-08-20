@@ -25,6 +25,8 @@ First the DHT11 takes the temperature reading, then it sends the data to the Meg
 ## Breadboard Prototype
 The system was first built and tested on a breadboard before being transferred into the custom Arduino Mega shield PCB design.
 
+The temperature threshold was set to 29.8°C to trigger the temperature warning, as the DHT11 was reading the room temperature.
+
 - Normal operation — LCD shows live temperature and Normal temp, LED off:
 
 <img width="485" height="418" alt="image" src="https://github.com/user-attachments/assets/fe96e190-a4d9-4b99-ac2d-5ec7e6bef2c7" />
