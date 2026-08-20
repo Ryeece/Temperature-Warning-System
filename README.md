@@ -55,5 +55,13 @@ KiCad PCB layout:
 
 The Mega-template header footprints mainly establish the correct physical positions. In place of the female headers, male headers will be soldered underneath the physical PCB to allow the connection to the Mega 2560, and female headers will be soldered on top for removable connections for the DHT11/LCD.
 ## Problems Encountered and Fixes
+## Problems Encountered and Fixes
+
+| Problem | Cause | Fix |
+|---|---|---|
+| External LED did not light | Both LED legs were connected to the same breadboard node | Repositioned the LED so each leg was connected to a different node |
+| LCD displayed dark blocks instead of text | D7 was connected incorrectly | Corrected the LCD wiring so D7 connected to the correct LCD pin |
+| Invalid DHT11 reading | Sensor communication failed when the signal was disconnected | Added `isnan()` fault detection, an LCD error message and warning LED activation |
+| KiCad ERC/DRC warnings | Unused and duplicated connections in the Arduino Mega template | Used No Connect flags, `PWR_FLAG`s and intentional exclusions where appropriate |
 ## Final Result
 ## Future Improvements
