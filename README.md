@@ -21,7 +21,7 @@ Using the Arduino Mega I measured the temperature with a DHT11 sensor and had th
 - Battery power supply
 - Custom Arduino Mega shield PCB designed in KiCad to replace the breadboard and jumper wires
 ## System Operation
-First the DHT11 takes the temperature reading, then it sends the data to the Mega and using the code uploaded on the Mega it displays the temperature on the LCD. If the temperature threshold is exceeded the warning LED turns on and a warning message is displayed on the LCD. Finally the function `isnan()` is used to detect an invalid sensor reading which activates the warning LED and error message on the LCD.
+First the DHT11 takes the temperature reading, then it sends the data to the Mega and the Mega processes the reading using the uploaded code and displays the temperature on the LCD. If the temperature threshold is exceeded the warning LED turns on and a warning message is displayed on the LCD. Finally the function `isnan()` is used to detect an invalid sensor reading which activates the warning LED and error message on the LCD.
 ## Breadboard Prototype
 The system was first built and tested on a breadboard before being transferred into the custom Arduino Mega shield PCB design.
 
@@ -69,7 +69,7 @@ KiCad PCB layout:
 
 <img width="627" height="556" alt="3D view of the PCB Mega shield" src="https://github.com/user-attachments/assets/edd0cc0d-a606-4631-9a60-22abe778bf9d" />
 
-The Mega-template header footprints mainly establish the correct physical positions. In place of the female headers, male headers will be soldered underneath the physical PCB to allow connection to the Mega 2560, and female headers will be soldered on top for removable connections for the DHT11/LCD.
+The Mega-template header footprints mainly establish the correct physical positions. In place of the female headers, male headers will be soldered underneath the physical PCB to allow connection to the Mega 2560, and female headers will be soldered on top for removable connections for the DHT11 and LCD.
 ## Problems Encountered and Fixes
 
 | Problem | Cause | Fix |
