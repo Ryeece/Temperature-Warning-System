@@ -99,6 +99,9 @@ The DHT11 live temperature measurement was displayed on the LCD with a warning L
 
 ## Project Files
 
+- [Arduino Code](code/Temperature%20Warning%20System.ino)
+- [KiCad PCB Files](pcb/)
+- [Project Report](documentation/Temperature%20Warning%20system%20report.pdf)
 
 ## Future Improvements
 
