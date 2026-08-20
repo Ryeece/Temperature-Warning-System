@@ -25,12 +25,17 @@ First the DHT11 takes the temperature reading, then it sends the data to the Meg
 ## Breadboard Prototype
 The system was first built and tested on a breadboard before being transferred into the custom Arduino Mega shield PCB design.
 
-Normal operation — LCD shows live temperature and Normal temp, LED off.
+- Normal operation — LCD shows live temperature and Normal temp, LED off:
 
 <img width="485" height="418" alt="image" src="https://github.com/user-attachments/assets/fe96e190-a4d9-4b99-ac2d-5ec7e6bef2c7" />
 
+- High-temperature warning — LCD shows TEMP TOO HIGH, warning LED on:
 
+<img width="519" height="418" alt="image" src="https://github.com/user-attachments/assets/78f6b438-1282-4f8d-8de5-5e1e760caea6" />
 
+- Sensor fault — LCD shows the sensor error message, warning LED on:
+
+<img width="485" height="426" alt="image" src="https://github.com/user-attachments/assets/3776b65e-7e59-48ca-ad5a-70ac5dcb2880" />
 
 ## Testing and Fault Handling
 | Test | Expected Result | Result |
