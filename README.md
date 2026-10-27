@@ -164,6 +164,7 @@ This project allowed me to develop practical skills in electronic circuit design
 
 - [Arduino Code](code/Temperature%20Warning%20System.ino)
 - [KiCad PCB Files](pcb/)
+- [PCB Manufacturing Files (Gerber ZIP)](Temperature-Warning-System-Gerber-Files.zip.zip)
 - [Project Report](documentation/Temperature%20Warning%20system%20report.pdf)
 
 ## Future Improvements
