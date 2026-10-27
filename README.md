@@ -51,14 +51,33 @@ The temperature threshold was temporarily set to 29.8°C so the high-temperature
 
 ## Testing and Fault Handling
 
+The system was initially tested on a breadboard to verify the temperature monitoring, warning LED, LCD messages and sensor fault detection before transferring the circuit to the custom PCB.
+
+The manufactured PCB was then assembled and connected to the Arduino Mega 2560 to verify that the completed hardware operated correctly.
+
 | Test | Expected Result | Result |
-|---|---|---|
+|------|-----------------|--------|
 | Temperature below threshold | LED off and normal-temperature message displayed on the LCD | Pass |
 | Temperature above threshold | LED on and high-temperature warning message displayed on the LCD | Pass |
 | DHT11 signal disconnected | Warning LED on and sensor error message displayed on the LCD | Pass |
-| Battery-powered operation | System operates without the laptop connection | Pass |
+| Battery-powered operation | System operates without a laptop connection | Pass |
+| Assembled PCB functionality | All components operate correctly through the custom PCB | Pass |
 
-To test the `isnan()` fault handling, I deliberately disconnected the DHT11 signal.
+### Sensor Fault Detection
+
+To test the `isnan()` fault handling, I deliberately disconnected the DHT11 signal. The Arduino detected the invalid sensor reading, activated the warning LED and displayed an error message on the LCD.
+
+### Physical PCB Testing
+
+After soldering the components and headers onto the manufactured PCB, the shield was connected to the Arduino Mega 2560.
+
+The system operated successfully during its initial testing, with the LCD displaying live temperature readings and the warning LED responding to the programmed conditions.
+
+The normal-temperature, high-temperature warning and sensor fault states were successfully tested using the assembled PCB.
+
+The completed system was also tested using a standalone 9V battery connected to the Arduino's power input, confirming that it could operate without a computer connection.
+
+No changes to the PCB design were required for the system to function. However, a possible intermittent solder connection was identified as an area for further inspection.
 
 ## PCB Design
 
@@ -149,11 +168,11 @@ This project allowed me to develop practical skills in electronic circuit design
 
 ## Future Improvements
 
-A temperature-controlled fan could be added that uses PWM (Pulse Width Modulation) based on the temperature, allowing the cooling rate to increase or decrease when needed.
+A temperature-controlled fan could be added, using PWM (Pulse Width Modulation) to automatically adjust the fan speed based on the measured temperature. This would allow the system to actively regulate temperature rather than simply provide a warning.
 
-To ensure the system never needs a temperature threshold code change again, some user-adjustable buttons to alter the threshold could be added.
+User-adjustable buttons could be implemented to allow the temperature warning threshold to be changed without modifying and uploading the Arduino code.
 
-The manufacturing and soldering of the custom PCB need to be completed.
+The power supply could be improved by replacing the 9V battery with a more efficient rechargeable power source, allowing the system to operate independently for longer periods.
 
+A protective enclosure could also be designed to house the Arduino, custom PCB and other components, making the completed system more compact and suitable for practical use.
 Eventually, the Arduino Mega can be replaced with a microcontroller mounted directly on the PCB.
-
