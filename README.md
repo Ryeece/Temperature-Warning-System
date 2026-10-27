@@ -84,6 +84,34 @@ KiCad PCB layout:
 
 The Mega-template header footprints mainly establish the correct physical positions. In place of the female headers, male headers will be soldered underneath the physical PCB to allow connection to the Mega 2560, and female headers will be soldered on top for removable connections for the DHT11 and LCD.
 
+## PCB Manufacturing and Assembly
+
+After completing the PCB design in KiCad, I generated the Gerber and drill files required for manufacturing. These files were uploaded to JLCPCB, where I ordered the custom two-layer PCB.
+
+Once the manufactured boards arrived, I assembled the circuit by soldering the components and pin headers onto the PCB using the soldering facilities at university.
+
+The completed PCB was then connected to the Arduino Mega 2560 and powered using a 9V battery through the Arduino's barrel jack.
+
+During initial testing, I encountered a minor connectivity issue, potentially caused by a solder joint. However, the PCB operated successfully without requiring any modifications to the original design.
+
+This was my first experience taking a PCB design through the complete process of manufacturing, physical assembly and functional testing.
+
+**1. Manufactured PCB before assembly**
+
+<img width="2939" height="1756" alt="abeaa23c-ff28-453b-9b34-27aee167287b" src="https://github.com/user-attachments/assets/2374e473-e207-4f60-a838-000f716533aa" />
+
+**2. Assembled PCB**
+
+<img width="2604" height="1516" alt="7457f3ca-184c-4f7e-a55a-f20ad012b804" src="https://github.com/user-attachments/assets/c8600566-cc69-4fc1-8701-a208054f75a2" />
+
+**3. PCB underside and solder joints**
+
+<img width="2558" height="1445" alt="24507200-7832-4bf4-92d5-ca6c81b51798" src="https://github.com/user-attachments/assets/33186b3a-9a65-4050-886d-782e24a9e84d" />
+
+**4. Completed and operational system**
+
+<img width="3280" height="1908" alt="14abddc6-8759-4831-aed0-3780acbb3313" src="https://github.com/user-attachments/assets/7e0f7d16-b539-445e-9135-867792e6095b" />
+
 ## Problems Encountered and Fixes
 
 | Problem | Cause | Fix |
@@ -95,7 +123,23 @@ The Mega-template header footprints mainly establish the correct physical positi
 
 ## Final Result
 
-The DHT11 live temperature measurement was displayed on the LCD with a warning LED and high-temperature message when the temperature threshold was exceeded. The sensor fault detection worked by activating the warning LED and displaying an error message on the LCD. The system operated independently using battery power. The custom Mega shield PCB design was completed and checked with ERC and DRC, but the physical PCB manufacturing/soldering is still pending.
+The temperature warning system has been successfully developed, manufactured, assembled and tested.
+
+After completing the circuit design and programming, I designed a custom Arduino Mega shield PCB using KiCad. The PCB was manufactured by JLCPCB, and I soldered all the components myself using the facilities at university.
+
+Following assembly, the system operated successfully without requiring any PCB design modifications. A minor connectivity issue was encountered, potentially caused by a solder joint, but the system was able to function correctly.
+
+The completed system successfully:
+
+- Measures and displays live temperature readings on a 16×2 LCD.
+
+- Detects temperatures exceeding the programmed threshold and displays a high-temperature warning.
+
+- Detects sensor faults and displays an error message.
+
+- Operates independently using a 9V battery connected to the Arduino Mega.
+
+This project allowed me to develop practical skills in electronic circuit design, microcontroller programming, PCB design, soldering, troubleshooting and hardware testing. It was particularly rewarding to see a PCB I had independently designed operate successfully after manufacturing and assembly.
 
 ## Project Files
 
